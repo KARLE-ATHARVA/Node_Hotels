@@ -1,7 +1,7 @@
 const mongoose=require('mongoose');
 
-//const mongoURL=process.env.Db_User_Local;
-const mongoURL=process.env.Db_User;
+const mongoURL=process.env.Db_User_Local;
+//const mongoURL=process.env.Db_User;
 
 mongoose.connect(mongoURL,{
     useNewUrlParser: true,

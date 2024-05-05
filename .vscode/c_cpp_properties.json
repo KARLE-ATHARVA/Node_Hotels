@@ -10,7 +10,9 @@
       "cppStandard": "${default}",
       "intelliSenseMode": "windows-gcc-x64",
       "compilerArgs": [
-        ""
+        "-Wall", // Enable all warnings
+        "-Wextra", // Enable extra warnings
+        "-pedantic-errors" // Treat warnings as errors
       ]
     }
   ],
