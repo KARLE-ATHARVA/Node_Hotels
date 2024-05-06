@@ -1,5 +1,6 @@
 const passport=require('passport')
 const person=require('./models/person')
+const bcrypt= require('bcrypt')
 const LocalStrategy=require('passport-local').Strategy
 
 passport.use(new LocalStrategy(async (username, password, done) => {

@@ -39,7 +39,7 @@ app.listen(PORT,()=>{
 
 
 const personRoutes=require('./routes/personRoutes');
-app.use('/person',passportLocalAuthenticate,personRoutes)
+app.use('/person',personRoutes)
 const MenuItemRoutes=require('./routes/MenuItemRoutes');
 app.use('/Menu',MenuItemRoutes)
 

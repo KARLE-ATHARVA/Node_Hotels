@@ -54,15 +54,14 @@ personSchema.pre('save', async function (next) {
 });
 
 // Method to compare password
-personSchema.methods.comparePassword = async function(candidatePassword){
+personSchema.methods.comparePassword= async function(candidatePassword){
   try{
-      // Use bcrypt to compare the provided password with the hashed password
-      const isMatch = await bcrypt.compare(candidatePassword, this.password);
-     return isMatch
-  }catch(err){
-      throw err;
+    const isMatch = await bcrypt.compare(candidatePassword,this.password)
+    return isMatch
+  }
+  catch(err){
+    return next(err)
   }
 }
-
 const person = mongoose.model('person', personSchema);
 module.exports = person;
